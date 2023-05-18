@@ -1,0 +1,16 @@
+﻿
+@model HomeVM
+ <div class="col-md-12">
+            <ul class="nav d-flex justify-content-center">
+                <li class="nav-item mx-lg-4">
+                    <a class="filter-btn nav-link btn-outline-primary active shadow rounded-pill text-light px-4 light-300" href="#" data-filter=".project">All</a>
+                </li>
+        @foreach (var item in Model.Categories)
+        {
+                            <li class="nav-item mx-lg-4">
+                                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300" href="#" data-filter=".@item.Name.ToLower().Trim()">@item.Name</a>
+                            </li>
+        }
+
+            </ul>
+        </div>
